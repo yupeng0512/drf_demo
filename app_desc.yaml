@@ -2,7 +2,7 @@ module:
   language: Python
   processes:
     web:
-      command: gunicorn drf-demo.wsgi -b :$PORT --log-file -
+      command: gunicorn bluesapps.wsgi -b :$PORT --log-file -
     worker:
       command: python manage.py celery worker -l info
     beat:
